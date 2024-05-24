@@ -1,0 +1,21 @@
+<h1>Step 2: Select your config and options</h1>
+<div class="config-container">
+    <span>
+        <label>Config:</label>
+        <select [(ngModel)]="selectedModelConfigId" (change)="onModelConfigChange($event)">
+            <option [value]="0" selected>Choose...</option>
+            <option *ngFor="let item of modelConfigs" [value]="item.id">{{item.description}}</option>
+        </select>
+    </span>
+    <span *ngIf="this.selectedModelConfigId !== 0">
+        <label>Range:{{range}} - Max Speed: {{speed}} - Cost: {{price}}  </label> 
+    </span>
+    <span>
+        <label>Tow hitch?: </label>
+        <input type="checkbox" [(ngModel)]="towHichCheckbox">
+    </span>
+    <span>
+        <label>Yoke steering wheel?: </label>
+        <input type="checkbox" [(ngModel)]="yokeCheckbox">
+    </span>
+</div>

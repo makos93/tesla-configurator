@@ -1,0 +1,16 @@
+<h1>Step 1: Choose your Model and Color</h1>
+<div class="modelcolor-container">
+    <label>Model: </label>
+    <select [(ngModel)]="selectedModelOption" (change)="onModelDropDownChanged($event)">
+        <option [value]="'default'" selected>Choose...</option>
+        <option *ngFor="let item of modelDropdownOptions" [value]="item.code">{{item.description}}</option>
+    </select>
+    <label>Color: </label>
+    <select [(ngModel)]="selectedColorOption"  (change)="onColorDropDownChanged($event)">
+        <option *ngFor="let item of colorDropdownOptions" [value]="item.code">{{item.description}}</option>
+    </select>
+</div>
+<div class="image-container">
+    <img [src]="teslaImageUrl">
+</div>
+
