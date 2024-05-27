@@ -1,0 +1,19 @@
+.summary-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.total-cost-container{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-top:solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.left-label{
+    display:inline-block;
+    width: 400px;
+}

@@ -1,16 +1,31 @@
 .navbar{
-    ul{
+   
         display: flex;
         flex-direction: row;
-        li{
+        a{
             list-style-type: none;
             width: 200px;
             text-align: center;
             border-style: solid;
             border-width: 1px;
             border-color: gray;
+            color: white;
             background-color: #242322;
+            width: 100%;  
         }
-    }
+
+        .disabled-link {
+            cursor: not-allowed;
+        }
+
+        a:hover{
+            background-color: #5e5a57;
+        }
+
     border: none;
 }
+
+.main-container{
+    width: 1000px;
+}
+

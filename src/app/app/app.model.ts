@@ -12,7 +12,7 @@ export interface ITeslaColor {
 
 export interface ITeslaModelOption{
     configs: ITeslaConfig[];
-    towhitch: boolean;
+    towHitch: boolean;
     yoke: boolean;
 }
 
@@ -22,4 +22,16 @@ export interface ITeslaConfig{
     range: number;
     speed: number;
     price: number;
+}
+
+export interface ITeslaInfo{
+    modelName: string;
+    range: number;
+    speed: number;
+    config: string;
+    configPrice: number;
+    towhitch: boolean;
+    yoke: boolean;
+    color: string;
+    colorPrice: number;
 }

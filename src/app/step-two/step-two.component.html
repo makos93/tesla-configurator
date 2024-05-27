@@ -2,20 +2,25 @@
 <div class="config-container">
     <span>
         <label>Config:</label>
-        <select [(ngModel)]="selectedModelConfigId" (change)="onModelConfigChange($event)">
+        <select id="configSelect" [(ngModel)]="selectedModelConfigId" (change)="onModelConfigChange($event)">
             <option [value]="0" selected>Choose...</option>
             <option *ngFor="let item of modelConfigs" [value]="item.id">{{item.description}}</option>
         </select>
     </span>
-    <span *ngIf="this.selectedModelConfigId !== 0">
-        <label>Range:{{range}} - Max Speed: {{speed}} - Cost: {{price}}  </label> 
-    </span>
-    <span>
-        <label>Tow hitch?: </label>
-        <input type="checkbox" [(ngModel)]="towHichCheckbox">
-    </span>
-    <span>
-        <label>Yoke steering wheel?: </label>
-        <input type="checkbox" [(ngModel)]="yokeCheckbox">
-    </span>
+    <ng-container *ngIf="selectedModelConfigId != 0">
+        <label>Range: {{range}} miles - Max Speed: {{speed}} - Cost: {{price | currency: 'USD'}} </label>
+    </ng-container>
+
+    <ng-container *ngIf="isTowHitchEnabled">
+        <span>
+            <label>Tow hitch?: </label>
+            <input id="includeTow" type="checkbox" [(ngModel)]="isTowHitchChecked" (change)="onTowHitchCheckBoxChange($event)">
+        </span>
+    </ng-container>
+    <ng-container *ngIf="isYokeEnabled">
+        <span>
+            <label>Yoke steering wheel?: </label>
+            <input id="includeYoke" type="checkbox" [(ngModel)]="isYokeChecked" (change)="onYokeCheckBoxChange($event)">
+        </span>
+    </ng-container>
 </div>

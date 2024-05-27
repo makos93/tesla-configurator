@@ -1,11 +1,15 @@
+<div class="main-container">
 <nav>
   <div class="navbar">
-    <ul>
-      <li [routerLink]="['/stepone']">Step 1</li>
-      <li [routerLink]="['/steptwo']">Step 2</li>
-      <li [routerLink]="['/stepthree']">Step 3</li>
-    </ul>
+      <a id="step1" [routerLink]="['/stepone']"  >Step 1</a>
+      <a id="step2" [routerLink]="['/steptwo']" [ngClass]="{'disabled-link': !_guardStateService.canActivateStepTwo}">Step 2</a>
+      <a id="step3" [routerLink]="['/stepthree']" [ngClass]="{'disabled-link': !_guardStateService.canActivateStepThree}">Step 3</a>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
+
+<ng-container *ngIf="isTeslaImageVisible">
+  <img [src]="_teslaConfiguratorService.teslaImageUrl">
+</ng-container>
+</div>
