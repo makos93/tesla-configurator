@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITeslaConfig, ITeslaModel, ITeslaModelOption } from '../app.model';
+import { ITeslaConfig} from '../../app.model';
 import { HttpClientModule } from '@angular/common/http';
 import { TeslaConfiguratorService } from '../../tesla-configurator.service';
 import { config, first, tap } from 'rxjs';

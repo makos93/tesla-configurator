@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ITeslaColor, ITeslaConfig, ITeslaInfo, ITeslaModel, ITeslaModelOption } from './app/app.model';
+import { ITeslaColor, ITeslaConfig, ITeslaInfo, ITeslaModel, ITeslaModelOption } from './app.model';
 import { Observable, forkJoin, map } from 'rxjs';
 
 @Injectable({

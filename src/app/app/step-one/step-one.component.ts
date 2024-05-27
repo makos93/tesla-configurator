@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TeslaConfiguratorService } from '../../tesla-configurator.service';
-import { ITeslaColor, ITeslaModel } from '../app.model';
+import { ITeslaColor, ITeslaModel } from '../../app.model';
 import { CommonModule } from '@angular/common';
 import { every, first, pipe } from 'rxjs';
 import { FormsModule } from '@angular/forms';
