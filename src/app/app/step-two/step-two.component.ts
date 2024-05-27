@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ITeslaConfig, ITeslaModel, ITeslaModelOption } from '../app/app.model';
+import { ITeslaConfig, ITeslaModel, ITeslaModelOption } from '../app.model';
 import { HttpClientModule } from '@angular/common/http';
-import { TeslaConfiguratorService } from '../tesla-configurator.service';
+import { TeslaConfiguratorService } from '../../tesla-configurator.service';
 import { config, first, tap } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { GuardStateService } from '../guard-state.service';
+import { GuardStateService } from '../../guard-state.service';
 
 @Component({
   selector: 'app-step-two',

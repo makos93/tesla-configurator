@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { TeslaConfiguratorService } from '../tesla-configurator.service';
-import { ITeslaInfo } from '../app/app.model';
+import { TeslaConfiguratorService } from '../../tesla-configurator.service';
+import { ITeslaInfo } from '../app.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
